@@ -9,8 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+      # - name: Set up Python ${{ matrix.python-version }}
+      # - name: Display Python version
+      #   run: python -c "import sys; print(sys.version)"
+      - name: script-runing
+        run: python hello.py

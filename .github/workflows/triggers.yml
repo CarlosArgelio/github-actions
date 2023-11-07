@@ -1,0 +1,27 @@
+name: testing with triggers
+run-name: Run Testing with Three triggers
+
+on: 
+  push:
+    branches:
+      - "main"
+    paths:
+      - "**.py"
+
+on:
+  schedule:
+    - cron: '30 5,17 * * *'
+
+# on: issue_comment
+
+on: 
+  workflow_dispatch:
+    inputs:
+      alerta:
+        description: 'nivel'
+        required: true
+        default: medio
+        type: choice
+        options:
+          - bajo
+          - medio

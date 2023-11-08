@@ -5,7 +5,7 @@ on:
       edad:
         description: '¿Qué edad tienes?'
         required: true
-        type: integer
+        type: "number"
       nombre:
         description: ¿Cómo te llamas?
         required: true

@@ -8,13 +8,9 @@ on:
     paths:
       - "**.py"
 
-on:
   schedule:
     - cron: '30 5,17 * * *'
 
-# on: issue_comment
-
-on: 
   workflow_dispatch:
     inputs:
       alerta:
@@ -25,3 +21,7 @@ on:
         options:
           - bajo
           - medio
+
+jobs:
+  this-is-a-job:
+    runs-on: ubuntu:latest

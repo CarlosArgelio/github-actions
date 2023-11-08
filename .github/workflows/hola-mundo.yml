@@ -17,3 +17,5 @@ jobs:
       #   run: python -c "import sys; print(sys.version)"
       - name: script-runing
         run: python hello.py
+      - name: log 
+        run: echo ${{ github.ref }}
